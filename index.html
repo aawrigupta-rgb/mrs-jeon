@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Diii! 🥳🎉💖</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .card-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            padding: 40px 25px;
+            text-align: center;
+            max-width: 480px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .top-emojis {
+            font-size: 50px;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite;
+        }
+
+        h1 {
+            color: #ff4a75;
+            font-size: 2.6rem;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .sub-heading {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        /* Interactive Cake Section */
+        .cake-section {
+            margin: 20px 0 30px 0;
+            cursor: pointer;
+        }
+
+        .cake-graphic {
+            font-size: 75px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .cake-graphic:hover {
+            transform: scale(1.1);
+        }
+
+        .blow-instruction {
+            font-size: 0.9rem;
+            color: #ff4a75;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .letter-box {
+            background: #fff;
+            border-left: 5px solid #ff4a75;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: left;
+            margin-bottom: 30px;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .letter-box p {
+            color: #444;
+            line-height: 1.6;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .surprise-btn {
+            background: linear-gradient(45deg, #ff4a75, #ff758c);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(255, 74, 117, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .surprise-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 74, 117, 0.6);
+        }
+
+        /* Background Confetti Animation Elements */
+        .confetti {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            opacity: 0.8;
+            border-radius: 4px;
+            animation: fall 4s linear infinite;
+            top: -20px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        @keyframes fall {
+            0% { top: -20px; transform: translateX(0) rotate(0deg); }
+            100% { top: 100vh; transform: translateX(120px) rotate(720deg); }
+        }
+
+        /* Colorful confetti setup */
+        .confetti:nth-child(1) { left: 8%; background: #ff4a75; animation-duration: 3.2s; }
+        .confetti:nth-child(2) { left: 25%; background: #ffcd3c; animation-duration: 4.2s; animation-delay: 0.5s; }
+        .confetti:nth-child(3) { left: 45%; background: #4ae0ff; animation-duration: 3.7s; animation-delay: 1.2s; }
+        .confetti:nth-child(4) { left: 65%; background: #a34aff; animation-duration: 4.8s; animation-delay: 0.2s; }
+        .confetti:nth-child(5) { left: 85%; background: #4aff86; animation-duration: 3.9s; animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+
+    <!-- Falling Confetti -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <div class="card-container">
+        <div class="top-emojis">👑🎈✨</div>
+        <h1 id="main-title">Happy Birthday, Diii! 🎂</h1>
+        <div class="sub-heading">To my absolute favourite human ever! 💖🥂</div>
+
+        <!-- Interactive Cake Element -->
+        <div class="cake-section" onclick="blowCandle()">
+            <div class="cake-graphic" id="cake">🎂</div>
+            <p class="blow-instruction" id="cake-status">Click the cake to blow out the candle! 🕯️💨</p>
+        </div>
+
+        <div class="letter-box">
+            <p>Happy birthday to my absolute favorite human! 🥳🎂</p>
+            <p>From selecting others' clothes and endless late-night laughs to the quiet moments where you just get me without a word, life is infinitely better with you in it! 🌟💖</p>
+            <p>You’ve been my biggest cheerleader, my safe space through every single high and low, and the one person who knows all my quirks and somehow loves me even more for them. 🫂✨</p>
+            <p>I honestly don’t know what I did to deserve a best friend who feels like family. I love you so much! 🫶❤️</p>
+        </div>
+
+        <button class="surprise-btn" onclick="showSurprise()">Click For A Surprise! 🎁</button>
+    </div>
+
+    <script>
+        let candleBlown = false;
+
+        function blowCandle() {
+            if (!candleBlown) {
+                document.getElementById('cake').innerHTML = "🍰✨";
+                document.getElementById('cake-status').innerHTML = "Yay! Make a wish! 🌟🥳";
+                document.getElementById('main-title').innerHTML = "Make A Wish! 💫🎉";
+                candleBlown = true;
+                
+                setTimeout(() => {
+                    alert("🤫 Keep your wish secret so it comes true!");
+                }, 300);
+            }
+        }
+
+        function showSurprise() {
+            alert("🎉 HAPPY BIRTHDAY DIII! You are officially the coolest person on the internet today. 🥳 Now go open my text message for your real birthday wishes! 💌🎈");
+        }
+    </script>
+</body>
+</html>
